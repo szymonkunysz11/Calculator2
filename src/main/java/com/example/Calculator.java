@@ -14,6 +14,9 @@ public class Calculator {
     }
 
     public double divide(int a, int b) {
-    return (double) a / b;
+        if (b == 0) {
+            throw new IllegalArgumentException("Cannot divide by zero!");
+        }
+        return (double) a / b;
     }
 }
